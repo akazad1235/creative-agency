@@ -1,6 +1,7 @@
 import React from 'react';
 import Client from '../Client/Client';
 import ClientFeedback from '../ClientFeedback/ClientFeedback';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Portfolios from '../Portfolio/Portfolios';
 import Services from '../Service/Services';
@@ -15,6 +16,7 @@ const Home = () => {
             <Services></Services>
             <Portfolios></Portfolios>
             <ClientFeedback></ClientFeedback>
+            <Footer></Footer>
         </div>
     );
 };
