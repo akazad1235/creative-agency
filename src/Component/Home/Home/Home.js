@@ -1,7 +1,8 @@
 import React from 'react';
 import Client from '../Client/Client';
 import Header from '../Header/Header';
-import Service from '../Service/Service';
+import Services from '../Service/Services';
+
 
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
         <div>
             <Header></Header>
             <Client></Client>
-            <Service></Service>
+            <Services></Services>
         </div>
     );
 };
