@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Dashboard from './Component/Dashboard/Dashboard./Dashboard';
 import Home from './Component/Home/Home/Home';
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         <Switch>
           <Route path="/home">
             <Home/>
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard/>
           </Route>
           <Route path="/">
             <Home />

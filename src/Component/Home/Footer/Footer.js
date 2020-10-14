@@ -19,7 +19,6 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
                 <p className="text-center my-5">Copyright Orange Labes 2020</p>
         </section>
     );

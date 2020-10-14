@@ -7,7 +7,6 @@ import Portfolios from '../Portfolio/Portfolios';
 import Services from '../Service/Services';
 
 
-
 const Home = () => {
     return (
         <div>
