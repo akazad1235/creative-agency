@@ -1,14 +1,17 @@
 import React from 'react';
 import './Portfolios.css';
 import Slider from "react-slick";
+import project1 from '../../../images/carousel-1.png';
+import project2 from '../../../images/carousel-2.png';
+import project3 from '../../../images/carousel-3.png';
+import project4 from '../../../images/carousel-4.png';
+import project5 from '../../../images/carousel-5.png';
 
 const Portfolios = () => {
-    var settings = {
-        dots: true,
-        infinite: false,
+    let settings = {
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         initialSlide: 0,
         responsive: [
           {
@@ -16,8 +19,6 @@ const Portfolios = () => {
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
-              infinite: true,
-              dots: true
             }
           },
           {
@@ -43,30 +44,22 @@ const Portfolios = () => {
                 <div className="container  ">
                     <h1 className="text-center text-white ">Here are some of <span className="text-success">our works</span></h1>
         <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+          <div className="p-1">
+            <img className="img-fluid" src={project1} alt=""/>
           </div>
-          <div>
-            <h3>2</h3>
+          <div className="p-1">
+          <img className="img-fluid" src={project2} alt=""/>
           </div>
-          <div>
-            <h3>3</h3>
+          <div className="p-1">
+          <img className="img-fluid" src={project3} alt=""/>
           </div>
-          <div>
-            <h3>4</h3>
+          <div className="p-1">
+          <img className="img-fluid" src={project4} alt=""/>
           </div>
-          <div>
-            <h3>5</h3>
+          <div className="p-1">
+          <img className="img-fluid" src={project5} alt=""/>
           </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
+         
         </Slider>
                 </div>
 
