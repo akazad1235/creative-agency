@@ -6,7 +6,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Dashboard from './Component/Dashboard/Dashboard./Dashboard';
+import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
+import OrderForm from './Component/Dashboard/OrderForm/OrderForm';
+import OrderList from './Component/Dashboard/OrderList/OrderList';
 import Home from './Component/Home/Home/Home';
 
 function App() {
@@ -16,8 +18,17 @@ function App() {
           <Route path="/home">
             <Home/>
           </Route>
-          <Route path="/dashboard">
+          {/* <Route path="order">
             <Dashboard/>
+          </Route> */}
+          <Route path="/customer/order">
+            <OrderForm/>
+          </Route>
+          <Route path="/customer/orderlist">
+            <OrderList/>
+          </Route>
+          <Route path="/customer/review">
+            <OrderList/>
           </Route>
           <Route path="/">
             <Home />

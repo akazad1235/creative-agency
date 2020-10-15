@@ -1,17 +1,40 @@
 import React from 'react';
+import Sidebar from '../Sidebar/Sidebar';
+import logo from '../../../images/logos/logo.png';
+import './OrderForm.css'
 
 const OrderForm = () => {
     return (
-        <div className='row'>
-            <div className="col-md-5">
-            <form>
-                <input className="form-control my-2" placeholder="Your email address" type="text" name="name" />
-                <input className="form-control my-2" placeholder="Your name/ company's name" type="text" name="name" />
-                <textarea className="form-control my-2" style={{height:'150px'}} placeholder="Send Message"></textarea>
-                <button type="submit" className="btn btn-secondary p-2">Send</button>
-            </form>
+        <div className="container">
+            <div className='row'>
+            <div className="col-md-2 col-sm-6 col-12">
+                    <img src={logo} className="img-fluid" alt=""/>
+                    <Sidebar></Sidebar>
             </div>
-            <div className="col-md-5"></div>
+            <div className="col-md-10 col-sm-6 col-12 ">
+                    <div className="row">
+                        <div className="col-md-8 my-2">Order</div>
+                        <div className="col-md-2 my-2 ">Ak Azad</div>
+                    </div>
+                    <div className="row bg">
+                    <div className="col-md-6 m-5">
+                        <form>
+                            <input type="text" className="form-control my-2"  placeholder="Your Name/ Company Name"/>
+                            <input type="text" className="form-control my-2"  placeholder="Your Email"/>
+                            <input type="text" className="form-control my-2"  placeholder="Graphic Design"/>
+                            <input type="text" className="form-control my-2"  placeholder="Project Details"/>
+                            <textarea className="form-control  my-2" placeholder="descriptsion"></textarea>
+                            <div className="d-flex">
+                            <input type="text" className="form-control my-2 mr-1"  placeholder="price"/>
+                            <input type="file" className="form-control my-2"  />
+                            </div>
+                            <input type="button" value="submit"/>
+                        </form>
+                    </div>
+                    <div className="col-md-4">sdfsdf</div>
+                </div>
+            </div>
+        </div>
         </div>
     );
 };

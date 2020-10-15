@@ -10,19 +10,19 @@ const Sidebar = () => {
         <div className="sidebar py-5 px-4">
         <ul className="list-unstyled text-secondary">
             <li>
-                <Link to="/dashboard" className="text-secondary">
-                    <FontAwesomeIcon icon={faShoppingCart} /> <span>Order</span>
+                <Link to="/customer/order" className="text-secondary">
+                    <FontAwesomeIcon icon={faShoppingCart} /><span>Order</span>
                 </Link>
             </li>
             <li>
-                <Link to="/" className="text-secondary">
-                    <FontAwesomeIcon icon={faList} /> <span>Service List</span>
+                <Link to="/customer/orderlist" className="text-secondary">
+                    <FontAwesomeIcon icon={faList} /><span>Service List</span>
                 </Link>
             </li>
             <div>
                 <li>
-                    <Link to="/allPatients" className="text-secondary">
-                        <FontAwesomeIcon icon={faEnvelope} /> <span>Review</span>
+                    <Link to="/customer/review" className="text-secondary">
+                        <FontAwesomeIcon icon={faEnvelope} /><span>Review</span>
                     </Link>
                 </li>
 
