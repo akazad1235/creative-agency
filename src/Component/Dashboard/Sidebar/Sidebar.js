@@ -25,7 +25,7 @@ const Sidebar = () => {
             </li>
             <div>
                 <li>
-                    <Link to="/customer/review" className="text-secondary">
+                    <Link to={`/customer/review/${id[2]}` }className="text-secondary">
                         <FontAwesomeIcon icon={faEnvelope} /><span>Review</span>
                     </Link>
                 </li>

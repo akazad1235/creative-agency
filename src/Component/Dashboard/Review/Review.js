@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useForm } from 'react-hook-form';
+import { UserContext } from '../../../App';
 import logo from '../../../images/logos/logo.png';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Review = () => {
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const {register, handleSubmit, errors} =useForm();
+    
+    const onSubmit = (data) => {
+        // data.email = `${loggedInUser.email}` ;
+         console.log(data);
+         const addReview = {...loggedInUser, ...data};
+ 
+        // data.Design = {title};
+        fetch('http://localhost:5000/addReview', {
+         method: 'POST',
+         headers: {'Content-Type': 'application/json'},
+         body: JSON.stringify(addReview)
+     })
+     .then(res => res.json())
+     .then( success => {
+         if(success) {
+                        alert('your order place successful');
+                     }
+     })
+     };
     return (
         <div className="container">
         <div className='row'>
@@ -17,17 +41,11 @@ const Review = () => {
                 </div>
                 <div className="row bg">
                 <div className="col-md-6 m-5">
-                    <form>
-                        <input type="text" className="form-control my-2"  placeholder="Your Name/ Company Name"/>
-                        <input type="text" className="form-control my-2"  placeholder="Your Email"/>
-                        <input type="text" className="form-control my-2"  placeholder="Graphic Design"/>
-                        <input type="text" className="form-control my-2"  placeholder="Project Details"/>
-                        <textarea className="form-control  my-2" placeholder="descriptsion"></textarea>
-                        <div className="d-flex">
-                        <input type="text" className="form-control my-2 mr-1"  placeholder="price"/>
-                        <input type="file" className="form-control my-2"  />
-                        </div>
-                        <input type="button" value="submit"/>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input type="text" className="form-control my-2" name="name" value={loggedInUser.name}/>
+                        <input type="text" className="form-control my-2" name="desination" placeholder="Desination" ref={register}/>
+                        <textarea className="form-control  my-2"  name="desc" placeholder="descriptsion" ref={register}></textarea>
+                        <button>Send Review</button>
                     </form>
                 </div>
                 <div className="col-md-4">sdfsdf</div>

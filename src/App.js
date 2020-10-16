@@ -8,9 +8,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import AddService from './Component/Admin/AddService/AddService';
+import MakeAdmin from './Component/Admin/MakeAdmin/MakeAdmin';
+import Orders from './Component/Admin/Orders/Orders';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
 import OrderForm from './Component/Dashboard/OrderForm/OrderForm';
 import OrderList from './Component/Dashboard/OrderList/OrderList';
+import Review from './Component/Dashboard/Review/Review';
 import Home from './Component/Home/Home/Home';
 import Login from './Component/Login/Login';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
@@ -40,8 +44,17 @@ function App() {
           <Route path="/customer/orderlist">
             <OrderList/>
           </Route>
-          <Route path="/customer/review">
-            <OrderList/>
+          <PrivateRoute path="/customer/review/:id">
+            <Review/>
+          </PrivateRoute>
+          <Route path="/admin/ordersList/:id">
+            <Orders/>
+          </Route>
+          <Route path="/admin/addService/:id">
+            <AddService/>
+          </Route>
+          <Route path="/admin/AddAdmin/:id">
+            <MakeAdmin/>
           </Route>
           <Route path="/login">
             <Login/>

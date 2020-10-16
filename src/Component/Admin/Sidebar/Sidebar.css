@@ -5,7 +5,7 @@
 .sidebar li:hover span{
     display: inline-block;
     transform: translate(5px);
-    color:green;
+    color:green
 }
 .sidebar svg{
     margin-right: 5px;
