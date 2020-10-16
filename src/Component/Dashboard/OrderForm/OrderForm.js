@@ -77,7 +77,7 @@ const OrderForm = () => {
                             <input type="file" className="form-control my-2"  />
                             </div>
                             <button>Add Service</button>
-                      </form>
+                       </form>
                     </div>
                     <div className="col-md-4">sdfsdf</div>
                 </div>
