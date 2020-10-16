@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import logo from '../../../images/logos/logo.png';
 import './Orders.css';
 const Orders = () => {
+    const [ordersList, setOrdersList] = useState([]);
+
+    useEffect(() => {
+      fetch('http://localhost:5000/adminOrderList')
+      .then( res => res.json())
+      .then( data =>setOrdersList(data))
+    }, [])
+
+    console.log(ordersList);
+
     return (
       
              <div className="container">
@@ -29,52 +39,28 @@ const Orders = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <td>Md. Azad</td>
-                            <td>Azad@gmail.com</td>
-                            <td>web development</td>
-                            <td>this is web developmet is very nice</td>
-                            <td>Panding</td>
-                            </tr>
-                            <tr>
-                            <td>Md. Azad</td>
-                            <td>Azad@gmail.com</td>
-                            <td>web development</td>
-                            <td>this is web developmet is very nice</td>
-                            <td>
-                                <select>
-                                    <option>Panding</option>
-                                    <option>Done</option>
-                                    <option>Panding</option>
-                                </select>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>Md. Azad</td>
-                            <td>Azad@gmail.com</td>
-                            <td>web development</td>
-                            <td>this is web developmet is very nice</td>
-                            <td>
-                                <select>
-                                    <option>Panding</option>
-                                    <option>Done</option>
-                                    <option>Panding</option>
-                                </select>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>Md. Azad</td>
-                            <td>Azad@gmail.com</td>
-                            <td>web development</td>
-                            <td>this is web developmet is very nice</td>
-                            <td>
-                                <select>
-                                    <option>Panding</option>
-                                    <option>Done</option>
-                                    <option>Panding</option>
-                                </select>
-                            </td>
-                            </tr>
+                            { 
+                                ordersList.map( orders => {
+                                 return<>
+                                     <tr>
+                                         <td>{orders.name}</td>
+                                         <td>{orders.email}</td>
+                                         <td>{orders.title}</td>
+                                         <td>{orders.desc}</td>
+                                        <td>
+                                            <select>
+                                                <option>Panding</option>
+                                                <option>Done</option>
+                                                <option>Panding</option>
+                                            </select>
+                                        </td>
+                                     </tr>
+                                 </>
+                                })
+                            }
+                           
+                           
+                           
                         
                         </tbody>
                      </table>
