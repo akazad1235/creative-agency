@@ -51,7 +51,7 @@ const Portfolios = () => {
           <img className="img-fluid" src={project2} alt=""/>
           </div>
           <div className="p-1">
-          <img className="img-fluid" src={project3} alt=""/>
+          <img className="img-fluid" src={project5} alt=""/>
           </div>
           <div className="p-1">
           <img className="img-fluid" src={project4} alt=""/>

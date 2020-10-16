@@ -1,0 +1,5 @@
+.myhover:hover{
+    border: 1px solid gray;
+    cursor: pointer;
+    text-decoration: none;
+}

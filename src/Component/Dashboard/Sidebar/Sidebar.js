@@ -6,11 +6,15 @@ import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = () => {
+    // const id =[
+    //     {id:1}
+    // ]
+    let id = [1, 2, 3];
     return (
         <div className="sidebar py-5 px-4">
         <ul className="list-unstyled text-secondary">
             <li>
-                <Link to="/customer/order" className="text-secondary">
+                <Link to={`/customer/order/${id[0]}`} className="text-secondary">
                     <FontAwesomeIcon icon={faShoppingCart} /><span>Order</span>
                 </Link>
             </li>
