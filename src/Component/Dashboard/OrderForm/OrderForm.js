@@ -19,7 +19,7 @@ const OrderForm = () => {
         const newOrder = {status, ...loggedInUser, ...data};
 
        // data.Design = {title};
-       fetch('http://localhost:5000/newOrder', {
+       fetch('https://radiant-falls-65936.herokuapp.com/newOrder', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(newOrder)

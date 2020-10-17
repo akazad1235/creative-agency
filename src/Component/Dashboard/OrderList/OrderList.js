@@ -9,12 +9,12 @@ import { useEffect } from 'react';
 
 const OrderList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext) 
-    const [eventTask, setEventTaks] = useState([]);
+    const [servieOrder, setServiceOrder] = useState([]);
 
           useEffect(() => {
-            fetch('http://localhost:5000/orderList?email='+loggedInUser.email)
+            fetch('http://localhost:4200/orderList?email='+loggedInUser.email)
             .then( res => res.json())
-            .then( data =>setEventTaks(data))
+            .then( data =>setServiceOrder(data))
           }, [])
 
     return (
@@ -31,7 +31,7 @@ const OrderList = () => {
                     </div>
                     <div className="row bg">
                      { 
-                    eventTask.map( orderlist => {
+                    servieOrder.map( orderlist => {
                        return<>
                         <div className="col-md-5 m-2">
                             <div className="card">

@@ -9,13 +9,13 @@ const ClientFeedback = () => {
     const [review, setReview] = useState([]);
 
     useEffect(() => {
-      fetch('http://localhost:5000/clientReview')
+      fetch('https://radiant-falls-65936.herokuapp.com/clientReview')
       .then( res => res.json())
       .then( data =>setReview(data))
     }, []);
     console.log(review);
     useEffect(() => {
-        fetch('http://localhost:5000/clientReview')
+        fetch('https://radiant-falls-65936.herokuapp.com/clientReview')
         .then( res => res.json())
         .then( data =>setReview(data))
       }, []);
