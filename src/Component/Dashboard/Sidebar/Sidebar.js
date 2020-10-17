@@ -19,7 +19,7 @@ const Sidebar = () => {
                 </Link>
             </li>
             <li>
-                <Link to="/customer/orderlist" className="text-secondary">
+                <Link to= "/customer/orderlist/" className="text-secondary">
                     <FontAwesomeIcon icon={faList} /><span>Service List</span>
                 </Link>
             </li>
