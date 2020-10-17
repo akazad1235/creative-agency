@@ -12,7 +12,7 @@ const OrderList = () => {
     const [servieOrder, setServiceOrder] = useState([]);
 
           useEffect(() => {
-            fetch('http://localhost:4200/orderList?email='+loggedInUser.email)
+            fetch('https://creative-agency-cc80c.web.app/orderList?email='+loggedInUser.email)
             .then( res => res.json())
             .then( data =>setServiceOrder(data))
           }, [])
