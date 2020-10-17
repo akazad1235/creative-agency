@@ -1,24 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Service.css'
+import './Service.css';
 
 const Service = (props) => {
-    // const handleOrderService = (id) => {
-    //     console.log('service order click', id);
-    // }
-    const {id, title, desc, img} =props.service;
+
+    const {_id, title, desc, fileName} =props.service;
     return (
            
-                <div className="col-md-4 p-3 myhover">
-                    <Link to={`/customer/order/${id}`} className="text-decoration-none">
+                <div className="col-md-4 my-5 p-3 myhover">
+                    <Link to={`/customer/order/${_id}`} className="text-decoration-none">
                     <div>
-                    <img className="mx-auto d-block my-3" style={{width:'75px'}} src={img} alt=""/>
-                    <h4 className="my-3 text-center">{title}</h4>
-                    <p className="my-3 text-center">{desc}</p>
+                    <img className="mx-auto d-block my-3" style={{width:'75px'}} src={`http://localhost:5000/${fileName}`} alt=""/>
+                    <h4 className="my-3 text-center  text-dark">{title}</h4>
+                    <p className="my-3 text-center  text-secondary">{desc.substring(0, 100)}</p>
                     </div>
                     </Link>
-                </div>
-          
+                </div>    
     );
 };
 

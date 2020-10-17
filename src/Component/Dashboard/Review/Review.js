@@ -10,11 +10,9 @@ const Review = () => {
     const {register, handleSubmit, errors} =useForm();
     
     const onSubmit = (data) => {
-        // data.email = `${loggedInUser.email}` ;
          console.log(data);
          const addReview = {...loggedInUser, ...data};
- 
-        // data.Design = {title};
+
         fetch('http://localhost:5000/addReview', {
          method: 'POST',
          headers: {'Content-Type': 'application/json'},
@@ -22,9 +20,9 @@ const Review = () => {
      })
      .then(res => res.json())
      .then( success => {
-         if(success) {
-                        alert('your order place successful');
-                     }
+         if(success){
+             alert('your order place successful');
+        }
      })
      };
     return (
@@ -36,8 +34,8 @@ const Review = () => {
         </div>
         <div className="col-md-10 col-sm-6 col-12 ">
                 <div className="row">
-                    <div className="col-md-8 my-2">Order</div>
-                    <div className="col-md-2 my-2 ">Ak Azad</div>
+                    <div className="col-md-8 my-2">Review</div>
+                    <div className="col-md-2 my-2 ">{loggedInUser.name}</div>
                 </div>
                 <div className="row bg">
                 <div className="col-md-6 m-5">
@@ -45,10 +43,10 @@ const Review = () => {
                         <input type="text" className="form-control my-2" name="name" value={loggedInUser.name}/>
                         <input type="text" className="form-control my-2" name="desination" placeholder="Desination" ref={register}/>
                         <textarea className="form-control  my-2"  name="desc" placeholder="descriptsion" ref={register}></textarea>
-                        <button>Send Review</button>
+                        <button className="btn btn-success">Send Review</button>
                     </form>
                 </div>
-                <div className="col-md-4">sdfsdf</div>
+                <div className="col-md-4"></div>
             </div>
         </div>
     </div>

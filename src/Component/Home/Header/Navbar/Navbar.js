@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../../../images/logos/logo.png'
 
 const Navbar = () => {
+    let id =[0,1,2,3];
     return (
         <section className="container" >
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -24,6 +25,9 @@ const Navbar = () => {
                     </li>
                     <li className="nav-item mr-4">
                         <Link className="nav-link">Contact Us</Link>
+                    </li>
+                    <li className="nav-item mr-4 ">
+                        <Link to={`/admin/ordersList/${id[0]}`} className="nav-link btn btn-secondary text-white">Admin</Link>
                     </li>
                     <li className="nav-item mr-4 ">
                         <Link className="nav-link btn btn-secondary text-white">Login</Link>
