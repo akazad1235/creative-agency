@@ -7,7 +7,9 @@
 * User role permission access & user can see only own services & feedback our service
 * Create simple admin panel & and service manage & see incoming service request & status update
 
-###Technoloy Used
+### Technoloy Used
+
+* React Js            * mongoDB
 
 
 
