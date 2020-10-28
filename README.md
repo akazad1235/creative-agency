@@ -9,7 +9,18 @@
 
 ### Technoloy Used
 
-* React Js            * mongoDB
+* React Js            
+* Node Js
+* MongoDB
+* Firebase Authentication
+* React Bootstrap
+* React Router
+
+
+### Project Live
+
+* [website] (https://creative-agency-cc80c.web.app/)
+* [Server Side] (https://github.com/akazad1235/creative-agency-server)
 
 
 
